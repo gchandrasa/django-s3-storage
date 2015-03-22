@@ -15,6 +15,12 @@ class StaticStorage(S3BotoStorage):
         kwargs['file_overwrite'] = S3_STATIC_FILE_OVERWRITE
         super(StaticStorage, self).__init__(*args, **kwargs)
 
+    def url(self, name):
+        url = super(StaticStorage, self).url(name)
+        if name.endswith('/') and not url.endswith('/'):
+            url += '/'
+        return url
+
 
 class MediaStorage(S3BotoStorage):
     """ S3 Storage for uploaded media files """

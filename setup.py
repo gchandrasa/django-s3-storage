@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='s3_storage',
-    version='0.1',
+    version='0.1.2',
     description='Extension for django-storages AWS S3 to specify MEDIA_ROOT for uploaded files and STATIC_ROOT for static files',
     author='Gilang Chandrasa',
     author_email='gilang.chandrasa@gmail.com',
